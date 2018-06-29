@@ -23,10 +23,7 @@ class ApplicationController < Sinatra::Base
     @current_user = User.find_by(session[:user_id])
     if @current_user
       erb :account
-      redirect :'/error'
-    end
-
-    erb :account
+    else erb :error
   end
 
   get '/logout' do
