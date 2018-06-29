@@ -7,7 +7,6 @@ class Helpers
   end
 
   def self.is_logged_in?(session_hash)
-    if session_hash.any? do |user_id|
-      user_id == 
+    !! self.current_user
   end 
 end
