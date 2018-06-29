@@ -6,15 +6,8 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <p><% if User.is_logged_in?(@session)%></p>
     <p><%= @current_user.username%></p>
     <p><%= @current_user.balance %></p>
-    <p><%else%></p>
-    <form action="/index.html" method="post">
-      <input type="text" name="" value="homepage">
-
-    </form>
-    <p><% end %></p>
 
       <form action="/logout" method="post">
         <input type="submit" name="" value="logout">
