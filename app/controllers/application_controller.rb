@@ -15,9 +15,10 @@ class ApplicationController < Sinatra::Base
     @password = params[:password]
     @current_user = User.find_by(:username)
       if @current_user.password == @password
-    @session = params[:username]
-
-
+          @session = params[:username]
+          redirect '/account'
+      else redirect '/login'
+      end 
   end
 
   get '/account' do
