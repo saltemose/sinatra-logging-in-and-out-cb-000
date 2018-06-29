@@ -9,6 +9,7 @@
     <p><% if User.is_logged_in?(@session)%></p>
     <p><%= @current_user.username%></p>
     <p><%= @current_user.balance %></p>
+    <p><%end  %></p>
 
       <form action="/logout" method="post">
         <input type="submit" name="" value="logout">
