@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
     @current_user = User.find_by(:username)
       if @current_user.password == @password
     @session = params[:username]
-    
+
 
   end
 
