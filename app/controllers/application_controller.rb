@@ -13,6 +13,7 @@ class ApplicationController < Sinatra::Base
   post '/login' do
     @username = params[:username]
     @password = params[:password]
+    @current_user = User.find_by(:username)
 
   end
 
@@ -26,4 +27,3 @@ class ApplicationController < Sinatra::Base
 
 
 end
-
