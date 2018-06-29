@@ -9,6 +9,11 @@
     <p><% if Helpers.is_logged_in?(session_hash)%></p>
     <p><%= @current_user.username%></p>
     <p><%= @current_user.balance %></p>
+    <p><% else %></p>
+    <form action="index.html" method="post">
+      <input type="submit" name="" value="homepage">
+      
+    </form>
 
       <form action="/logout" method="post">
         <input type="submit" name="" value="logout">
