@@ -17,8 +17,8 @@ class ApplicationController < Sinatra::Base
       if @current_user.password == @password
           @session = params[:username]
           redirect '/account'
-      else redirect '/login'
-      end 
+      else redirect '/error'
+      end
   end
 
   get '/account' do
