@@ -11,6 +11,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
+    @username = params[:username]
+    @password = params[:password]
 
   end
 
