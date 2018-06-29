@@ -1,8 +1,7 @@
 class Helpers
 
   def self.current_user(session_hash)
-    session_hash.each do |user_id|
-      current_user = User.find_by(user_id)
+      current_user = User.find_by(session_hash)
       current_user
     end
   end
